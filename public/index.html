@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111110">
+  <meta name="description" content="Stories, takes, and conversations from basketball fans everywhere.">
+  <title>Courtside — Basketball belongs to everyone</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/shared.js" defer></script>
+  <script src="./js/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Courtside home"><span class="brand-mark">C</span><span>COURTSIDE<span class="brand-period">.</span></span></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="nav-link active" href="./">Posts</a>
+      <a class="nav-link" href="./create.html">New post</a>
+      <a class="nav-cta" href="./post.html">Discussion <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="live-dot"></span> THE GAME IS BETTER TOGETHER</p>
+        <h1>Every court has<br>a <span>story.</span></h1>
+        <p class="hero-description">Posts and comments are saved in this browser only; other visitors will not see them.</p>
+        <a class="button button-primary" href="./create.html">Write a post <span>↗</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="hero-ring ring-one"></div><div class="hero-ring ring-two"></div>
+        <div class="hero-ball"><span></span></div>
+        <div class="hero-caption"><span>01 / COMMUNITY</span><span>EST. EVERY GAME</span></div>
+      </div>
+      <div class="hero-bottom"><span>BUILT FOR THE LOVE OF THE GAME</span><span>SCROLL TO EXPLORE ↓</span></div>
+    </section>
+
+    <section class="community-strip">
+      <div class="container community-inner">
+        <div><p class="eyebrow">MORE THAN THE SCORE</p><h2>For the ones who <span>live</span> basketball.</h2></div>
+        <p class="community-note">A community for game-day memories, player debates, pickup stories and everything in between. No hot take too hot. No story too small.</p>
+        <div class="community-stat"><strong>24<span>/7</span></strong><span>THE CONVERSATION<br>NEVER STOPS</span></div>
+      </div>
+    </section>
+
+    <section class="player-lookup container" aria-labelledby="player-lookup-title">
+      <div class="player-lookup-heading">
+        <div><p class="eyebrow">PLAYER LOOKUP</p><h2 id="player-lookup-title">NBA <span>players</span></h2></div>
+        <p>Search player profiles from TheSportsDB.</p>
+      </div>
+      <form id="player-search-form" class="player-search-form">
+        <label class="sr-only" for="player-search-input">Player name</label>
+        <input id="player-search-input" type="search" minlength="2" maxlength="80" required placeholder="Search by player name">
+        <button class="button button-primary" type="submit"><span id="player-search-label">Search</span></button>
+      </form>
+      <div id="player-search-status" class="status-message" role="status" aria-live="polite"></div>
+      <ul id="player-results" class="player-results" aria-label="Player search results"></ul>
+      <p class="player-source">Player data provided by <a href="https://www.thesportsdb.com/" target="_blank" rel="noreferrer">TheSportsDB</a>.</p>
+    </section>
+
+    <section class="feed-section container" id="feed">
+      <div class="section-heading">
+        <div><p class="eyebrow">FROM THE COMMUNITY</p><h2>Recent <span>posts</span></h2></div>
+        <a class="text-link" href="./create.html">Write a post <span>↗</span></a>
+      </div>
+      <div id="feed-status" class="status-message" role="status" aria-live="polite">Loading posts…</div>
+      <div id="post-grid" class="post-grid"></div>
+      <div class="feed-footer"><span>THAT’S ALL FOR NOW.</span><a href="./create.html">Write the next post <span>↗</span></a></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand" href="./"><span class="brand-mark">C</span><span>COURTSIDE<span class="brand-period">.</span></span></a><span>MADE FOR THE LOVE OF THE GAME.</span><a href="./create.html">Drop your take ↗</a></footer>
+</body>
+</html>

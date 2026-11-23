@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111110">
+  <meta name="description" content="Read and join the conversation on Courtside.">
+  <title>Discussion — Courtside</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/shared.js" defer></script>
+  <script src="./js/post.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Courtside home"><span class="brand-mark">C</span><span>COURTSIDE<span class="brand-period">.</span></span></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="nav-link" href="./">Posts</a><a class="nav-link" href="./create.html">New post</a><a class="nav-cta" href="./post.html">Discussion <span>↗</span></a>
+    </nav>
+  </header>
+  <main class="detail-page container">
+    <a class="back-link" href="./">← Back to the feed</a>
+    <div id="post-status" class="status-message" role="status" aria-live="polite">Loading post…</div>
+    <article id="post-detail" class="detail-article" hidden>
+      <div class="detail-kicker"><span id="detail-date"></span></div>
+      <h1 id="detail-title"></h1>
+      <div class="detail-byline"><span class="avatar" id="detail-avatar">C</span><span>Posted by <strong id="detail-author"></strong></span></div>
+      <div id="detail-content" class="detail-content"></div>
+    </article>
+    <section id="discussion" class="discussion-section" hidden>
+      <div class="section-heading discussion-heading"><div><p class="eyebrow">JOIN THE CONVERSATION</p><h2><span>Comments</span> <span class="comment-count" id="comment-count">0</span></h2><p class="player-source">This discussion is saved only in this browser.</p></div></div>
+      <form id="comment-form" class="comment-form">
+        <div class="form-section-label">ADD A COMMENT</div>
+        <div class="field-grid">
+          <div><label class="field-label" for="comment-name">Display name <span>OPTIONAL</span></label><input id="comment-name" name="name" maxlength="60" placeholder="Anonymous is cool too"></div>
+          <div><label class="field-label" for="comment-content">Comment <span class="required-mark">REQUIRED</span></label><textarea id="comment-content" name="content" rows="3" maxlength="2000" required placeholder="Write a comment..."></textarea></div>
+        </div>
+        <div id="comment-message" class="form-message" role="status" aria-live="polite"></div>
+        <button class="button button-primary" type="submit"><span id="comment-submit-label">Post comment</span><span>↗</span></button>
+      </form>
+      <div id="comments-status" class="status-message" role="status" aria-live="polite"></div>
+      <ol id="comments-list" class="comments-list"></ol>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="brand" href="./"><span class="brand-mark">C</span><span>COURTSIDE<span class="brand-period">.</span></span></a><span>MADE FOR THE LOVE OF THE GAME.</span><a href="./create.html">Drop your take ↗</a></footer>
+</body>
+</html>

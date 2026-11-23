@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111110">
+  <meta name="description" content="Write a post and start a conversation with the Courtside community.">
+  <title>New post — Courtside</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/shared.js" defer></script>
+  <script src="./js/create.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="Courtside home"><span class="brand-mark">C</span><span>COURTSIDE<span class="brand-period">.</span></span></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a class="nav-link" href="./">Posts</a><a class="nav-link active" href="./create.html">New post</a><a class="nav-cta" href="./post.html">Discussion <span>↗</span></a>
+    </nav>
+  </header>
+  <main class="form-page container">
+    <a class="back-link" href="./">← Back to the feed</a>
+    <div class="form-intro"><p class="eyebrow"><span class="live-dot"></span> YOUR COURT, YOUR VOICE</p><h1>Write a <span>post.</span></h1><p>Your post and its comments are saved only in this browser, not shared with other visitors.</p></div>
+    <div class="composer-layout">
+      <form id="post-form" class="composer-card">
+        <div class="form-section-label"><span>01</span> YOUR POST</div>
+        <label class="field-label" for="display-name">Display name <span>OPTIONAL</span></label>
+        <input id="display-name" name="name" maxlength="60" placeholder="Leave blank to post anonymously">
+        <label class="field-label" for="thoughts">What’s on your mind? <span class="required-mark">REQUIRED</span></label>
+        <textarea id="thoughts" name="content" rows="7" maxlength="5000" required placeholder="Write your post here..."></textarea>
+        <div class="character-count"><span id="thought-count">0</span> / 5000</div>
+        <div id="form-message" class="form-message" role="status" aria-live="polite"></div>
+        <button class="button button-primary submit-button" type="submit"><span id="submit-label">Publish post</span><span aria-hidden="true">↗</span></button>
+      </form>
+    </div>
+  </main>
+  <footer class="site-footer"><a class="brand" href="./"><span class="brand-mark">C</span><span>COURTSIDE<span class="brand-period">.</span></span></a><span>MADE FOR THE LOVE OF THE GAME.</span><a href="./">Back to the feed ↗</a></footer>
+</body>
+</html>
